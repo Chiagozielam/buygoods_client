@@ -1,0 +1,8 @@
+.footerContainer{
+    height: 400px;
+    width: 100%;
+    background-color: var(--main-dark-col);
+    position: relative;
+    bottom: 0;
+    margin-top: 15%;
+}

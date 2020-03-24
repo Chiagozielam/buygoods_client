@@ -1,0 +1,26 @@
+.category{
+    position: absolute !important;
+    padding: 10%;
+    bottom: 30%;
+    font-size: 80px !important;
+    transition: .1s ease-in;
+    width: 100%;
+}
+.category:hover{
+    background-color: white;
+}
+.link{
+    color: var(--main-orange-col);
+}
+
+.card{
+    overflow: hidden;
+}
+
+.categoryGrid{
+    margin-left: 10% !important;
+    margin-top: 1% !important;
+}
+.productGrid{
+    margin-top: 10% !important;
+}

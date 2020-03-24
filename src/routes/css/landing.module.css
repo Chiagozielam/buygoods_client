@@ -1,0 +1,14 @@
+.topCard{
+    height: 470px;
+}
+.topCardContent p{
+    padding: 7px;
+}
+
+.link{
+    color: black;
+}
+
+.link:hover{
+    color: var(--main-orange-col);
+}

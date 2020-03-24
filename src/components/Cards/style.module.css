@@ -1,0 +1,28 @@
+.images {
+  height: 220px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.price {
+  color: var(--main-orange-col);
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  right: 10%;
+  margin-bottom: 10% !important;
+}
+.bottomLink {
+  margin: 2%;
+}
+.card {
+  background-color: transparent !important;
+  margin-bottom: 5% !important ;
+  height: 400px;
+}
+
+.card:hover {
+  -webkit-box-shadow: -1px 5px 15px -5px rgba(74, 73, 74, 1);
+  -moz-box-shadow: -1px 5px 15px -5px rgba(74, 73, 74, 1);
+  box-shadow: -1px 5px 15px -5px rgba(74, 73, 74, 1);
+}

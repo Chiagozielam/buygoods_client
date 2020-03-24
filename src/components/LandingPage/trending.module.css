@@ -1,0 +1,22 @@
+.images{
+    height: 200px;
+    overflow: hidden;
+}
+
+.trendingHeader{
+    width: 140px;
+    padding: 1% 3%;
+    background-color: var(--main-orange-col);
+    color: var(--main-white-col) !important;
+    border-radius: 5px;
+    margin-top: -3% !important;
+    margin-bottom: 1%;
+}
+.price{
+    color: black;
+    font-size: 18px;
+    display: inline;
+}
+.bottomLink{
+    margin: 3%;
+}

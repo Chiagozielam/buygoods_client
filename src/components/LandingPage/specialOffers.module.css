@@ -1,0 +1,27 @@
+.cardHeader{
+    background-color: var(--main-orange-col) !important;
+    font-size: 20px !important;
+}
+.images{
+    height: 150px;
+    overflow: hidden;
+}
+
+.card{
+    background-color: #F5F5F5 !important;
+}
+
+.innerCards{
+    background-color: #F5F5F5 !important;
+}
+.discountPrice{
+    color: black;
+    font-size: 18px;
+    display: inline;
+}
+.formerPrice{
+    display: inline;
+    padding-left: 15px;
+    color: rgb(78, 78, 78);
+    text-decoration-line: line-through;
+}

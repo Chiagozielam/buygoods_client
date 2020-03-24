@@ -1,0 +1,18 @@
+.card{
+    height: 100%;
+}
+.cardText{
+    text-align: center;
+}
+
+/* .cardText:hover{
+    color: var(--main-orange-col);
+} */
+
+.linkContainer:hover .cardText{
+    color: var(--main-orange-col) !important;
+}
+
+.linkContainer:hover .card{
+    background-color: rgb(243, 223, 243);
+}

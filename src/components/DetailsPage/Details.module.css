@@ -1,0 +1,29 @@
+.price{
+    font-size: 28px;
+    font-weight: bolder;
+}
+.formerPrice{
+    font-size: 18px;
+    color: rgb(80, 79, 79);
+    margin-bottom: 5% !important;
+    margin-top: -4% !important;
+    text-decoration: line-through;
+}
+
+.button:hover{
+    border: 1px solid var(--main-orange-col) !important;
+}
+.button:focus{
+    border: 1px solid var(--main-orange-col) !important;
+    background-color: white !important;
+}
+
+.cartButton{
+    margin-top: 10% !important;
+    background-color: var(--main-orange-col) !important;
+    width: 100%;
+    color: white !important;
+    padding: 4% !important;
+    font-weight: bold;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46) !important;
+}
