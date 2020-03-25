@@ -13,6 +13,7 @@ import SmartphonesPage from "./routes/smartphonesPage"
 import FasionPage from "./routes/fasionPage";
 import LoginPage from "./routes/loginPage";
 import RegistrationPage from "./routes/registerPage";
+import DashboardPage from "./routes/dashboard";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route exact path="/categories/smartphones" component={SmartphonesPage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/register" component={RegistrationPage} />
+        <Route exact path="/dashboard" component={DashboardPage} />
       </Switch>
 
       <Footer />

@@ -1,9 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
-import { Grid, Image, Checkbox, Form, Button } from "semantic-ui-react";
+import { Grid, Image, Checkbox, Form, Button, Dimmer, Loader } from "semantic-ui-react";
 import style from "./css/signupAndLoginPage.module.css";
 
-const LoginPage = () => {
+const LoginPage = props => {
+  const [inputs, setInputs] = useState({
+    email: "",
+    password: ""
+  });
+  const [loading, setLoading] = useState(false);
+
+  const onChangeInputs = e => {
+    const { name, value } = e.target;
+    setInputs({ ...inputs, [name]: value });
+  };
+  const clickRememberMeCheckbox = () => {
+    console.log("remember me!")
+  }
+  const formSubmit = e => {
+    e.preventDefault();
+    setLoading(true);
+    const url = `http://localhost:5000/api/v1/users/`;
+    axios.post(url, inputs).then(res => {
+      console.log(res);
+      setLoading(false);
+      const token = res.data.token;
+      localStorage.setItem("user-token", token);
+      props.history.push("/dashboard");
+    });
+  };
+
+  const token =  localStorage.getItem("user-token");
+  if(token){props.history.push("/dashboard")}
   return (
     <article>
       <Grid>
@@ -24,18 +53,42 @@ const LoginPage = () => {
               <h2>Login</h2>
               <Form.Field>
                 <label>Email Address</label>
-                <input type="email" placeholder="" />
+                <input
+                  type="email"
+                  placeholder=""
+                  name="email"
+                  value={inputs.email}
+                  onChange={onChangeInputs}
+                  required
+                />
               </Form.Field>
               <Form.Field>
                 <label>Password</label>
-                <input type="password" placeholder="" />
+                <input
+                  type="password"
+                  placeholder=""
+                  name="password"
+                  value={inputs.password}
+                  onChange={onChangeInputs}
+                  required
+                />
               </Form.Field>
               <Form.Field>
-                <Checkbox label="Remember Me" />
+                <Checkbox label="Remember Me" onClick={clickRememberMeCheckbox} />
               </Form.Field>
-              <Button className={style.loginButton} type="submit">
+              <Button
+                className={style.loginButton}
+                type="submit"
+                onClick={formSubmit}
+                required
+              >
                 Login
               </Button>
+              {loading ? (
+              <Dimmer active inverted>
+                <Loader size="medium">Loading</Loader>
+              </Dimmer>
+              ) : ( "" )}
               <p>
                 New User? <Link to="/register">Create Account</Link>
               </p>
